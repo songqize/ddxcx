@@ -1,0 +1,77 @@
+.inner {
+  padding: 20rpx;
+}
+
+.title {
+  border-bottom: 1rpx solid #123456;
+  margin-bottom: 10rpx;
+}
+
+.title text {
+  display: block;
+  font-size: 32rpx;
+  width: 200rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #b6c7f9;
+  text-align: center;
+  color: #123456;
+}
+
+.imagePhoto {
+  width: 300rpx;
+}
+
+.imageType {
+  width: 80rpx;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20rpx;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 20rpx;
+}
+
+.typeON {
+  color: red;
+}
+
+.typeYes {
+  color: green;
+}
+
+.userType {
+  width: 260rpx;
+  padding: 20rpx;
+  border: 1px dashed #000;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  border-radius: 8rpx;
+  line-height: 80rpx;
+}
+
+.imgOuter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20rpx;
+}
+
+.image {
+  width: 500rpx;
+}
+
+.leftName {
+  display: inline-block;
+  width: 160rpx;
+}

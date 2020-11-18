@@ -1,0 +1,60 @@
+<view>
+  <view class="inner">
+    <view class="title">
+      <text>个人基本信息</text>
+    </view>
+    <view class="user">
+      <image src="../../imges/u205.png" class='imagePhoto' mode='widthFix'/>
+      <view class="userInfo">
+        <view>
+         姓名：{{infoData.HName}}
+        </view>
+        <view>
+         证号：{{infoData.WorkNo}}
+        </view>
+        <view>
+        时间：{{infoData.RecordDateTime}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="inner">
+    <view class="title">
+      <text>酒精检测信息</text>
+    </view>
+    <view class="user">
+      <view class="userType">
+      状态：
+        <text class="typeYes" a:if="{{infoData.DataStatus == '正常'}}">{{infoData.DataStatus}}</text>
+        <text class="typeON" a:else>{{infoData.DataStatus}}</text>
+        <image mode="widthFix" src="../../imges/u173.png" class='imageType' a:if="{{infoData.DataStatus != '正常'}}"/>
+      </view>
+      <view class="userInfo">
+        <view>
+          <text class="leftName">酒  精  值：</text>
+          <text class="typeYes" a:if="{{infoData.DataStatus == '正常'}}">{{infoData.DrinkValue}}</text>
+          <text class="typeON" a:else >{{infoData.DrinkValue}}</text>
+        </view>
+        <view>
+          <text class="leftName">仪器地址：</text>
+        {{infoData.TerminalName}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="inner">
+    <view class="title">
+      <text>上传的照片</text>
+    </view>
+    <view>
+      <view class="imgOuter">
+        <text>酒测照片</text>
+        <image src="{{infoData.DrinkImageFileUrl}}" class='image' mode='widthFix'/>
+      </view>
+      <view class="imgOuter">
+        <text>原始照片</text>
+        <image src="{{infoData.OrigImageFileUrl}}" class='image' mode='widthFix'/>
+      </view>
+    </view>
+  </view>
+</view>

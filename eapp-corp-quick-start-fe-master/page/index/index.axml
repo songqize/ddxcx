@@ -1,0 +1,37 @@
+<view class="topTIT row">
+  <view onTap="TypeChange" data-on="0">
+  今日记录
+    <text a:if="{{Outertype == 0}}"></text>
+  </view>
+  <view onTap="TypeChange" data-on="1">
+  历史记录
+    <text a:if="{{Outertype == 1}}"></text>
+  </view>
+</view>
+<view class="outerView1 outerView" a:if="{{Outertype == 0}}">
+  <view class="title">
+    <text>搜索结果</text>
+  </view>
+  <!--<view class="row">CorpId:{{corpId}}</view> -->
+  <!-- hidden="{{hideList}}" -->
+  <my-component tableData="{{tableData}}" onChanges="onChanges"/>
+</view>
+<view class="outerView2 outerView" a:if="{{Outertype == 1}}">
+  <form onSubmit='ResultQuery' class="row">
+    <input placeholder="输入证号或姓名 开始搜索" class="input-cx" name='inputVal'/>
+    <button type="primary" size="" class="btn-cx" form-type='submit'> 点击查询</button>
+  </form>
+  <view class="">
+    <radio-group class="radio-group" onChange="radioChange">
+      <label class="radio" a:for="{{items}}">
+        <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+      </label>
+    </radio-group>
+  </view>
+  <view class="title">
+    <text>搜索结果</text>
+  </view>
+  <!--<view class="row">CorpId:{{corpId}}</view> -->
+  <!-- hidden="{{hideList}}" -->
+  <my-component tableData="{{tableData}}" onChanges="onChanges"/>
+</view>

@@ -1,0 +1,51 @@
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th" style="flex-grow: 2.2;    padding: 0 0.1rem;">姓名/证号</view>
+    <view class="th" style="flex-grow: 1.3;">时间</view>
+    <view class="th ">状态</view>
+    <view class="th ">详情</view>
+  </view>
+  <block a:for="{{tableData}}" a:key="{{code}}">
+    <navigator url="/page/details/details?textID={{item.ID}}" open-type="navigate" hover-class="navigator-hover">
+      <!-- 醉酒状态 -->
+      <view class="tr bg-g" a:if="{{item.DrinkResult == '醉酒'}}">
+        <view class="td" style="flex-grow: 2.2;    padding: 0 0.1rem;">
+         {{item.HName}}
+          <view>
+           {{item.WorkNo}}
+          </view>
+        </view>
+        <view class="td" style="flex-grow: 1.3;">{{item.RecordDateTime}}</view>
+        <view class="td">{{item.DrinkResult}}</view>
+        <view class="td">
+          <image mode="widthFix" class="imgRight" src="../../../imges/u120.png"/></view>
+      </view>
+      <!-- 饮酒状态 -->
+      <view class="tr  bg-gr" a:elif="{{item.DrinkResult == '饮酒'}}">
+        <view class="td" style="flex-grow: 2.2;    padding: 0 0.1rem;">
+         {{item.HName}}
+          <view>
+           {{item.WorkNo}}
+          </view>
+        </view>
+        <view class="td" style="flex-grow: 1.3;">{{item.RecordDateTime}}</view>
+        <view class="td">{{item.DrinkResult}}</view>
+        <view class="td">
+          <image mode="widthFix" class="imgRight" src="../../../imges/u120.png"/></view>
+      </view>
+      <!-- 正常状态 -->
+      <view class="tr" a:else>
+        <view class="td" style="flex-grow: 2.2;    padding: 0 0.1rem;">
+           {{item.HName}}
+          <view>
+           {{item.WorkNo}}
+          </view>
+        </view>
+        <view class="td" style="flex-grow: 1.3;">{{item.RecordDateTime}}</view>
+        <view class="td">{{item.DrinkResult}}</view>
+        <view class="td">
+          <image mode="widthFix" class="imgRight" src="../../../imges/u120.png"/></view>
+      </view>
+    </navigator>
+  </block>
+</view>

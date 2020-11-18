@@ -1,0 +1,58 @@
+.table {
+  border: 0px solid darkgray;
+  font-size: 32rpx;
+  line-height: 1.5;
+}
+
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 1rem;
+  align-items: center;
+  padding: 10rpx 0;
+}
+
+.td {
+  width: 15%;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.table .bg-w {
+  background: snow;
+  padding: 0;
+}
+
+.bg-g {
+  background: #b90000;
+  border-bottom: 1px solid #fff;
+}
+
+.bg-gr {
+  background: #f72424;
+  border-bottom: 1px solid #fff;
+}
+
+.th {
+  width: 15%;
+  justify-content: center;
+  background: #e4e4e4;
+  color: #123;
+  font-weight: bold;
+  display: flex;
+  height: 1rem;
+  align-items: center;
+}
+
+.imgRight {
+  display: inline-block;
+  width: 40rpx;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  margin-left: -20rpx;
+}
